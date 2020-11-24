@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Button({ num, operator, acBtn }) {
+export default function Button({ name, operator, acBtn }) {
   return (
     <button
       className={`btn ${operator ? 'operatorBtn' : ''} ${acBtn ? 'acBtn' : ''}`}
       type="button"
     >
-      { num }
+      {name}
     </button>
   );
 }
@@ -18,7 +18,7 @@ Button.defaultProps = {
 };
 
 Button.propTypes = {
-  num: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   operator: PropTypes.bool,
   acBtn: PropTypes.bool,
 };
