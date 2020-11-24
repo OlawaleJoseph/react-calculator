@@ -1,3 +1,3 @@
 ## A simple calculator built with React.
 
-liv
+[Live version](https://wales-calculator.herokuapp.com/)
