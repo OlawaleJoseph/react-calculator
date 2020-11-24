@@ -21,3 +21,25 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.App {
+  width: 100%;
+  height: 100vh;
+  background-color: #777;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App__calculator {
+  max-width: 500px;
+  border-color: #fff;
+  display: grid;
+  grid-template-rows: 250px 1fr;
+}
+
+.button_panel {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
