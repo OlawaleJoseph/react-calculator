@@ -17,9 +17,12 @@ function App() {
         <div className="App__calculator">
           <Display />
           <ButtonPannel>
-            {buttons.map(button => (
-              <Button key={button} name={button} />
-            ))}
+            {buttons.map(button => {
+              const operators = ['+', '-', '*', '/', '%', 'X²'];
+              const isOperator = operators.includes(button);
+              const isAcBtn = button === 'AC';
+              return <Button key={button} name={button} operator={isOperator} acBtn={isAcBtn} />;
+            })}
           </ButtonPannel>
         </div>
       </div>

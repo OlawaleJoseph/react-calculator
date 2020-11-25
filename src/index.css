@@ -71,6 +71,14 @@ body {
   outline: none;
 }
 
+.operatorBtn {
+  background-color: rgb(216, 27, 27);
+}
+
+.acBtn {
+  background-color: rgb(9, 12, 223);
+}
+
 .display {
   background-color: #222;
   color: #fff;
