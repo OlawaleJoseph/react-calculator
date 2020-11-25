@@ -13,6 +13,8 @@ export default (num1, num2, operator) => {
       return firstNum.add(secondNum);
     case 'X²':
       return firstNum.pow(2);
+    case '%':
+      return firstNum.div(100).toString();
     default:
       return firstNum.sub(secondNum);
   }

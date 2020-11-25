@@ -44,11 +44,11 @@ const calculate = (calculator, btn) => {
 
   if (btn === '%') {
     if (prev && !operator) {
-      total = (prev / 100).toString();
+      total = operate(prev, null, '%');
       prev = '0';
     }
     if (next) {
-      next = (next / 100).toString();
+      next = operate(next, null, '%');
     }
   }
 
