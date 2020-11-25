@@ -12,16 +12,18 @@ function App() {
   ];
 
   return (
-    <div className="App">
-      <div className="App__calculator">
-        <Display />
-        <ButtonPannel>
-          {buttons.map(button => (
-            <Button key={button} name={button} />
-          ))}
-        </ButtonPannel>
+    <>
+      <div className="App">
+        <div className="App__calculator">
+          <Display />
+          <ButtonPannel>
+            {buttons.map(button => (
+              <Button key={button} name={button} />
+            ))}
+          </ButtonPannel>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
