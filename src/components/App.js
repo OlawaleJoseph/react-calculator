@@ -1,6 +1,8 @@
 import ButtonPannel from './ButtonPanel';
 import Display from './Display';
 import Button from './Button';
+// eslint-disable-next-line no-unused-vars
+import calculate from '../logic/calculate';
 
 function App() {
   const buttons = [
@@ -21,7 +23,14 @@ function App() {
               const operators = ['+', '-', '*', '/', '%', 'X²'];
               const isOperator = operators.includes(button);
               const isAcBtn = button === 'AC';
-              return <Button key={button} name={button} operator={isOperator} acBtn={isAcBtn} />;
+              return (
+                <Button
+                  key={button}
+                  name={button}
+                  operator={isOperator}
+                  acBtn={isAcBtn}
+                />
+              );
             })}
           </ButtonPannel>
         </div>
