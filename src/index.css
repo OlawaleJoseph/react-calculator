@@ -32,7 +32,7 @@ body {
 }
 
 .App__calculator {
-  max-width: 500px;
+  max-width: 380px;
   border-color: #fff;
   display: grid;
   grid-template-rows: 120px 1fr;
@@ -90,4 +90,5 @@ body {
   font-weight: bold;
   font-family: sans-serif;
   text-align: right;
+  overflow: hidden;
 }
