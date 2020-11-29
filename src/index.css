@@ -25,7 +25,7 @@ body {
 .App {
   width: 100%;
   height: 100vh;
-  background-color: #777;
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,49 +33,35 @@ body {
 
 .App__calculator {
   width: 700px;
-  border-color: #fff;
+  background-color: #ebebeb;
   display: grid;
-  grid-template-rows: 120px 1fr;
-  background-color: #333;
-  padding: 20px;
-  border-radius: 26px;
 }
 
 .button_panel {
   display: flex;
   flex-direction: column;
-  padding: 10px;
 }
 
 .btn {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  margin: 10px;
-  background-color: #333;
-  color: #fff;
-  border: 2px solid white;
-  box-shadow: 2px 5px 7px 2px rgba(0, 0, 0, 0.2);
-  font-size: 1.5em;
+  width: 25%;
+  margin: 0.5px;
+  background-color: transparent;
+  color: #000;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 2em;
   font-weight: bold;
 }
 
 .btn:hover {
-  border: 3px white solid;
-  font-size: 1.3em;
+  font-size: 1.7em;
 }
 
 .btn:focus {
-  border: 5px white solid;
   outline: none;
 }
 
 .operatorBtn {
-  background-color: rgb(216, 27, 27);
-}
-
-.acBtn {
-  background-color: rgb(9, 12, 223);
+  background-color: #f5913e;
 }
 
 .display {
@@ -96,4 +82,8 @@ body {
 .row {
   height: 100px;
   display: flex;
+}
+
+.wide {
+  flex: 1;
 }

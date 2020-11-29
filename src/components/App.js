@@ -6,11 +6,11 @@ import Button from './Button';
 import calculate from '../logic/calculate';
 
 const buttons = [
-  ['AC', 'X²', '%', '/'],
+  ['AC', '+/-', '%', '/'],
   ['9', '8', '7', '*'],
   ['6', '5', '4', '+'],
   ['3', '2', '1', '-'],
-  ['0', '.', '+/-', '='],
+  ['0', '.', '='],
 ];
 class App extends Component {
   constructor() {
@@ -61,16 +61,15 @@ class App extends Component {
               {buttons.map(group => (
                 <div key={group} className="row">
                   {group.map(button => {
-                    const operators = ['+', '-', '*', '/', '%', 'X²'];
+                    const operators = ['+', '-', '*', '/', '='];
                     const isOperator = operators.includes(button);
-                    const isAcBtn = button === 'AC';
                     return (
                       <Button
                         onClick={this.handleClick}
                         key={button}
                         name={button}
-                        operator={isOperator}
-                        acBtn={isAcBtn}
+                        color={isOperator}
+                        wide={button === '0'}
                       />
                     );
                   })}
