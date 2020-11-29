@@ -6,11 +6,11 @@ import Button from './Button';
 import calculate from '../logic/calculate';
 
 const buttons = [
-  'AC', 'X²', '%', '/',
-  '9', '8', '7', '*',
-  '6', '5', '4', '+',
-  '3', '2', '1', '-',
-  '0', '.', '+/-', '=',
+  ['AC', 'X²', '%', '/'],
+  ['9', '8', '7', '*'],
+  ['6', '5', '4', '+'],
+  ['3', '2', '1', '-'],
+  ['0', '.', '+/-', '='],
 ];
 class App extends Component {
   constructor() {
@@ -58,20 +58,24 @@ class App extends Component {
           <div className="App__calculator">
             <Display current={this.handledisplay(prev, next, total, operator)} />
             <ButtonPannel>
-              {buttons.map(button => {
-                const operators = ['+', '-', '*', '/', '%', 'X²'];
-                const isOperator = operators.includes(button);
-                const isAcBtn = button === 'AC';
-                return (
-                  <Button
-                    onClick={this.handleClick}
-                    key={button}
-                    name={button}
-                    operator={isOperator}
-                    acBtn={isAcBtn}
-                  />
-                );
-              })}
+              {buttons.map(group => (
+                <div key={group} className="row">
+                  {group.map(button => {
+                    const operators = ['+', '-', '*', '/', '%', 'X²'];
+                    const isOperator = operators.includes(button);
+                    const isAcBtn = button === 'AC';
+                    return (
+                      <Button
+                        onClick={this.handleClick}
+                        key={button}
+                        name={button}
+                        operator={isOperator}
+                        acBtn={isAcBtn}
+                      />
+                    );
+                  })}
+                </div>
+              ))}
             </ButtonPannel>
           </div>
         </div>

@@ -42,9 +42,8 @@ body {
 }
 
 .button_panel {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  display: flex;
+  flex-direction: column;
   padding: 10px;
 }
 
@@ -92,4 +91,9 @@ body {
   text-align: right;
   overflow: hidden;
   padding: 0 5px;
+}
+
+.row {
+  height: 100px;
+  display: flex;
 }
