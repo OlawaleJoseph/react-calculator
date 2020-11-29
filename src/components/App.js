@@ -4,6 +4,7 @@ import {
 } from 'react-router-dom';
 import Calculator from './Calculator';
 import Home from './Home';
+import Quote from './Quote';
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/calculator" component={Calculator} />
+        <Route exact path="/quote" component={Quote} />
       </Switch>
     </Router>
   );
