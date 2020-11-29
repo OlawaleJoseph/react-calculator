@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export default function Button({
-  name, operator, acBtn, onClick,
+  name, onClick, color, wide,
 }) {
   return (
     <button
-      className={`btn ${operator ? 'operatorBtn' : ''} ${acBtn ? 'acBtn' : ''}`}
+      className={`btn ${color ? 'operatorBtn' : ''} ${wide ? 'wide' : ''}`}
       type="button"
       value={name}
       onClick={onClick}
@@ -17,13 +17,13 @@ export default function Button({
 }
 
 Button.defaultProps = {
-  operator: false,
-  acBtn: false,
+  color: null,
+  wide: null,
 };
 
 Button.propTypes = {
   name: PropTypes.string.isRequired,
-  operator: PropTypes.bool,
-  acBtn: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
+  color: PropTypes.bool,
+  wide: PropTypes.bool,
 };
