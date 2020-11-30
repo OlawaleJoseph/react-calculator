@@ -10,7 +10,7 @@ export default function App() {
   return (
     <Router>
       <div className="nav">
-        <h1>Math Magicians</h1>
+        <h1 className="logo">Math Magicians</h1>
         <div className="nav-links">
           <Link to="/" className="nav-link">Home</Link>
           <Link to="/calculator" className="nav-link">Calculator</Link>
